@@ -3,6 +3,7 @@
 import { DocumentData } from "firebase/firestore";
 import { motion } from "framer-motion";
 import React from "react";
+import Logo from '../public/Garage ISEP Logo Simple White.png'
 
 type Props = {
   message: DocumentData;

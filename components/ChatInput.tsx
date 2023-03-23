@@ -45,6 +45,7 @@ function ChatInput({ chatId }: Props) {
             `https://ui-avatars.com/api/?name=${session?.user.name!}`,
         },
       };
+      console.log("Hello")
 
       await addDoc(
         collection(
@@ -53,9 +54,11 @@ function ChatInput({ chatId }: Props) {
         ),
         message
       );
+      console.log(message)
+
 
       // loading
-      const notification = toast.loading("ChatGPT is thinking...");
+      const notification = toast.loading("Garage GPT is thinking...");
 
       await fetch("/api/askQuestion", {
         method: "POST",
@@ -70,7 +73,7 @@ function ChatInput({ chatId }: Props) {
         }),
       }).then(() => {
         // Tost Notification
-        toast.success("ChatGPT has responded!", {
+        toast.success("Garage GPT has responded!", {
           id: notification,
         });
 

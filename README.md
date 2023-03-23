@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://user-images.githubusercontent.com/99184393/222309201-8fe96906-fc80-4c75-b141-d18b2686055e.png" alt="logo" width="205" height="auto" />
+  <img src="public/Garage%20ISEP%20Logo%20Black-1.png" alt="logo" width="205" height="auto" />
 
   <h1>ChatGPT Clone with React.JS</h1>
   

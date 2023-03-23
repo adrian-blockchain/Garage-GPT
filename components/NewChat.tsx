@@ -1,9 +1,9 @@
 import { firestore } from "@/firebase/firebase";
 import {
-  addDoc,
-  collection,
-  serverTimestamp,
-  Timestamp,
+    addDoc,
+    collection, getFirestore,
+    serverTimestamp,
+    Timestamp,
 } from "firebase/firestore";
 import { Session } from "next-auth";
 import { useRouter } from "next/navigation";
@@ -18,6 +18,7 @@ function NewChat({ session }: Props) {
 
   const createNewChat = async () => {
     try {
+
       if (!session) return;
 
       const doc = await addDoc(
@@ -27,7 +28,9 @@ function NewChat({ session }: Props) {
           userEmail: session.user.email,
           createdAt: serverTimestamp() as Timestamp,
         }
-      );
+      )
+
+        console.log(doc);
 
       if (!doc.id) return;
 

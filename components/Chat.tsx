@@ -7,6 +7,8 @@ import { useEffect, useRef } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
 
 import Message from "./Message";
+import Logo from '/public/Garage ISEP Logo Simple White.png';
+import Image from "next/image";
 
 type Props = {
   chatId: string;
@@ -36,6 +38,8 @@ function Chat({ chatId }: Props) {
     <div className="flex-1 overflow-y-auto overflow-x-hidden">
       {messages?.empty && (
         <>
+            <Image src={Logo} alt="logo" width={100} className="items-center ml-auto mr-auto"
+            />
           <p className="mt-10 text-center text-white">
             Type a prompt in below to get started
           </p>
